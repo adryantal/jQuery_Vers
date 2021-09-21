@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Rock+Salt&display=swap');
+
+body{
+    background: linen;
+    font-family: "Calibri",courier;
+
+}
+*{
+    box-sizing: border-box;
+}
+
+
+main, header, article
+{
+    border:1px solid palevioletred;
+    padding:10px;
+}
+
+article div{
+    border: 1px solid lavenderblush;
+    box-shadow: 2px 2px 4px #ff99cc;
+    padding: 10px;
+}
+
+footer{
+    padding:10px;
+    background: #ff99cc;
+    border-bottom: 1px solid palevioletred;
+    border-left: 1px solid palevioletred;
+    border-right: 1px solid palevioletred;
+}
+
+main {    
+    max-width: 900px;
+    margin: auto;
+    background: pink;
+    border-radius: 5px;
+}
+
+
+
+header, footer {
+    text-align: center;
+}
+
+h3{
+    font-family: 'Gochi Hand', cursive;
+    font-size: 200%;
+    background: lavenderblush;
+    padding: 5px 5px;
+    font-variant: all-small-caps;
+    border: 0.5px solid palevioletred;
+    transition-property: border, background;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+}
+
+h3:hover{
+    border: 0.5px solid fuchsia;
+    background: #ff99cc;
+}
+
+
+
+p{
+    text-align: justify;
+}
+
+div img{
+    width: 30%;
+    border:1px solid palevioletred;
+
+}
+
+input[type=button]:nth-child(odd){
+    margin-right: 10px;
+}
+
+
+
+
+/* Menü szerkezete és formázása*/
+
+ul{
+    padding-left: 0;
+    list-style: none; 
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    flex: 4;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 10px 5px; 
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition-property: border, background-color;
+    transition-timing-function: linear;
+    transition-duration: 0.5s;
+}
+
+li:hover{
+    background-color: palevioletred;
+    border: 1px solid lightcyan;
+    border-radius: 5px;
+}
+
+nav a{
+    text-decoration: none; 
+    color: purple;   
+
+}
+
+nav a:hover{
+    color: lightcyan; 
+
+}
+
+
+/* 4. oldal szerkezete és formázása*/
+
+#article4{    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+    grid-template-rows: repeat(2,1fr );
+
+}
+
+#article4 div{
+    border: 1px solid lavenderblush;
+   
+}
+
+#article4 div img{
+    width: 100%;
+    border:1px solid palevioletred;
+    
+}
+
+
+/* Reszponzivitás*/
+
+@media all and (max-width: 600px) { 
+
+    main { 
+        max-width: 100%;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
