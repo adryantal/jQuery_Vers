@@ -125,21 +125,35 @@ nav a:hover{
 
 #article4{    
     display: grid;
-    grid-template-columns: repeat(2, 1fr );
-    grid-template-rows: repeat(2,1fr );
-
+    grid-template-columns: repeat(2, 1fr );  
+    /*grid-template-rows: repeat(2, 1fr ); */ 
+     position: relative;  /*ez legyen a rögzített elem; ha a kép forog, akkor az áttetsző felületen keresztül látható legyen a mögötte lévő tartalom*/
 }
 
 #article4 div{
     border: 1px solid lavenderblush;
+  
+    
    
 }
 
 #article4 div img{
     width: 100%;
-    border:1px solid palevioletred;
+    border:1px solid palevioletred;    
     
 }
+
+#article4 div img:hover{
+    opacity: 60%;
+    border: 1px solid white;   
+    transform: rotateZ(5deg);    
+    padding: 10px;
+    position: absolute; /*a kép "lebegjen" az article 4 felett"*/
+    max-width: 50%;
+     
+}
+
+
 
 
 /* Reszponzivitás*/
@@ -154,6 +168,14 @@ nav a:hover{
         display: flex;
         flex-direction: column;
     }
+    
+    
+#article4{    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);  
+}
+
 
 
 }
